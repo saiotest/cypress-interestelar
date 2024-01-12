@@ -1,0 +1,52 @@
+{
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnPaste": true, // required 
+    "editor.formatOnType": true, // required
+    "editor.formatOnSave": true, // optional 
+    "editor.formatOnSaveMode": "file", // required to format on save
+    "files.autoSave": "onFocusChange", // optional but recommended
+    "vs-code-prettier-eslint.prettierLast": "true", // set as "true" to run 'prettier' last not first
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+	"editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
+	"terminal.integrated.fontFamily": "'Cascadia Code'",
+	"editor.accessibilitySupport": "off",
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	"editor.tabCompletion": "on",
+	"editor.lineHeight": 20,
+	"editor.cursorBlinking": "expand",
+	"editor.quickSuggestions": {
+		"other": "on",
+		"comments": "on",
+		"strings": "on"
+	},
+	"editor.autoIndent": "advanced",
+	"workbench.colorTheme": "Winter is Coming (Dark Blue)", 
+	"workbench.iconTheme": "material-icon-theme",
+	"material-icon-theme.folders.color": "#7cb342",
+	"editor.guides.bracketPairs": true,
+	"terminal.integrated.cursorStyle": "line",
+	"testing.automaticallyOpenPeekViewDuringAutoRun": true,
+	"testing.alwaysRevealTestOnStateChange": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"code-runner.runInTerminal": true,
+	"editor.wrappingIndent": "indent",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"redhat.telemetry.enabled": false,
+	"[cucumber]": {
+		"editor.defaultFormatter": "CucumberOpen.cucumber-official"
+	},
+	"files.associations": {
+		"*.feature": "feature"
+	},
+	"terminal.integrated.tabs.defaultColor": "terminal.ansiGreen",
+	"terminal.integrated.tabs.defaultIcon": "source-control",
+	"workbench.panel.defaultLocation": "bottom",
+	"terminal.integrated.fontSize": 16,
+	"terminal.integrated.enablePersistentSessions": true,
+	"terminal.integrated.cursorBlinking": true,
+	"window.zoomLevel": 1,
+	"workbench.tree.enableStickyScroll": true,
+	"explorer.fileNesting.enabled": true
+}

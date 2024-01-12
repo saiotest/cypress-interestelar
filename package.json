@@ -4,7 +4,16 @@
   "description": "how to create a good pro repo for cypress",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "regression": "cypress run",
+    "test:run": "cypress run --spec",
+    "junit:del:report": "rm cypress/tests_results/junit/* || true",
+    "junit:merge:reports": "jrm cypress/tests_results/junit/regression-report.xml \"cypress/tests_results/junit/*.xml\"",
+    "mocha:del:report": "rm cypress/tests_results/mocha/* || true",
+    "clean:reports": "npm run junit:del:report && npm run mocha:del:report",
+    "mocha:merge:reports": "mochawesome-merge \"cypress/tests_results/mocha/*.json\" > \"cypress/tests_results/regression_mocha.json\"",
+    "mocha:gen:report": "marge cypress/tests_results/regression_mocha.json",
+    "report": "npm run junit:merge:reports && npm run mocha:merge:reports && npm run mocha:gen:report"
   },
   "keywords": [
     "cypress",
@@ -20,6 +29,16 @@
     "cypress": "13.6.2",
     "cypress-multi-reporters": "^1.6.4",
     "cypress-plugin-api": "2.11.1",
-    "dotenv": "16.3.1"
+    "dotenv": "16.3.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-chai-friendly": "^0.7.4",
+    "eslint-plugin-cypress": "^2.15.1",
+    "junit-report-merger": "^6.0.3",
+    "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "prettier": "^3.1.1"
   }
 }

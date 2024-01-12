@@ -1,0 +1,34 @@
+name: Test Pipeline
+run-name: Running Test
+
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            
+            - name: 💿 Installing Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+
+            - name: 🧬 Install YARN and All Dependencies
+              run: |
+                  npm install -g yarn
+                  yarn
+
+            - name: 🧪 Run Tests
+              uses: cypress-io/github-action@v6.6.0
+              with:
+                browser: chrome
+              env:
+                USERNAME: ${{ secrets.USERNAME }}
+                PASSWORD: ${{secrets.PASSWORD}}
+                                
