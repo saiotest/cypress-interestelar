@@ -1,0 +1,25 @@
+{
+  "name": "cypress-interestelar",
+  "version": "1.0.0",
+  "description": "how to create a good pro repo for cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "upex",
+    "saitest"
+  ],
+  "author": "saitest",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "2.40.1",
+    "allure-commandline": "2.25.0",
+    "cypress": "13.6.2",
+    "cypress-multi-reporters": "^1.6.4",
+    "cypress-plugin-api": "2.11.1",
+    "dotenv": "16.3.1"
+  }
+}

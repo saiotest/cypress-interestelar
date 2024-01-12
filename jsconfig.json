@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"types": ["cypress", "cypress-plugin-api", "@shelex/cypress-allure-plugin"],
+		"paths": {
+			"@pages/*": ["./cypress/support/pages/*"],
+			"@data/*": ["./cypress/fixtures/*"]
+		}
+	},
+	"exclude": ["node_modules"],
+}
