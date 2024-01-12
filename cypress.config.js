@@ -7,7 +7,7 @@ export default defineConfig({
 	chromeWebSecurity: false,
 	downloadsFolder: 'cypress/downloads',
 	retries: process.env.CI ? 2 : 0,
-	video: process.env.CI,
+	video: Boolean(process.env.CI),
 	videosFolder: 'cypress/videos',
 	//* supportFile: "cypress/support/index.js",
 	screenshotOnRunFailure: true,
